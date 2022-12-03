@@ -1,0 +1,20 @@
+.section-primary {
+    background-color: rgb(var(--bs-primary-rgb));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.section-primary h1 {
+    text-align: center;
+}
+
+.section-light {
+    background-color: rgb(var(--bs-light-rgb));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
