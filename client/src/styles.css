@@ -4,6 +4,8 @@
 
 :root {
     --bs-primary-rgb: 223,124,109;
+    --bs-primary: rgb(var(--bs-primary-rgb));
+    --bs-primary-2: #ce7365;
 }
 
 body {
@@ -11,6 +13,7 @@ body {
 }
 .navbar-brand {
     color: white;
+    font-weight: 500;
 }
 
 .navbar-brand:hover, .nav-link:hover {
@@ -20,4 +23,15 @@ body {
 
 .nav-link {
     color: white;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-btn-bg);
+    --bs-btn-hover-bg: var(--bs-primary-2);
+    --bs-btn-hover-border-color: var(--bs-btn-hover-bg);
+    --bs-btn-active-bg: var(--bs-btn-bg);
+    --bs-btn-active-border-color: var(--bs-btn-border-color);
+    --bs-btn-disabled-bg: #f58d7d;
+    --bs-btn-disabled-border-color: var(--bs-btn-disabled-bg);
 }

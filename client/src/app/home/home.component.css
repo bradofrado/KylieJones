@@ -1,20 +1,26 @@
-.section-primary {
-    background-color: rgb(var(--bs-primary-rgb));
+[class*=section-] {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    flex-direction: column;
+    padding: 50px;
 }
 
-.section-primary h1 {
-    text-align: center;
+.section-primary {
+    color: white;
+    background-color: rgb(var(--bs-primary-rgb));
 }
 
 .section-light {
     background-color: rgb(var(--bs-light-rgb));
-    min-height: 100vh;
+    /* min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+}
+
+[class*=section-] h1, [class*=section-] h2, [class*=section-] h3, 
+[class*=section-] h4, [class*=section-] h5, [class*=section-] h6 {
+    text-align: center;
 }
