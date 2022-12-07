@@ -5,9 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { EventsListComponent } from './events/events-list.component';
+import { EventsListComponent } from './events/events-list/events-list.component';
 import { ToDirective } from './shared/to.directive';
 import { NotFoundComponent } from './shared/not-found.component';
+import { ImageButtonComponent } from './shared/image-button/image-button.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NotFoundComponent } from './shared/not-found.component';
     HomeComponent,
     EventsListComponent,
     ToDirective,
-    NotFoundComponent
+    NotFoundComponent,
+    ImageButtonComponent
   ],
   imports: [
     BrowserModule,

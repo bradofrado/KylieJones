@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./events-list.component.css']
 })
 export class EventsListComponent {
-
+    
 }

@@ -35,3 +35,18 @@ body {
     --bs-btn-disabled-bg: #f58d7d;
     --bs-btn-disabled-border-color: var(--bs-btn-disabled-bg);
 }
+
+.portfolio-grid-basic {
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    grid-column-gap: 90px;
+    grid-row-gap: 65px;
+    grid-auto-rows: min-content;
+}
+
+@media only screen and (min-width: 960px) {
+    .portfolio-grid-basic {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    
+    }
+}

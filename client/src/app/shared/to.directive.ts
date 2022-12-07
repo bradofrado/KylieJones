@@ -9,8 +9,10 @@ export class ToDirective {
     constructor(private router: Router) { }
 
     @HostListener('click') onClick(): void {
-        this.router.navigate([this.to]);
+        if (this.to) {
+            this.router.navigate([this.to]);
+        }
     }
 
-    @Input() to = '';
+    @Input() to: string = '';
 }

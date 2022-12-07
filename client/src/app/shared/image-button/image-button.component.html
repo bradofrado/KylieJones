@@ -1,0 +1,17 @@
+<a class="image-button-container" [routerLink]="to">
+<div [title]="title" class="{{'image-item-container' + (dark ? ' dark ' : ' ') + class}}">
+    <div class="image-container" *ngIf="img">
+        <img [src]="img" [alt]="title"/>
+    </div>
+    <!-- <a *ngIf="to" class="{{'image-button image-hover center-center' + (img ? ' no-color ' : '') + (buttonClass ? buttonClass : '')}}" [routerLink]="to">            
+        <div class="image-button-text center-center" >{{name}}</div>
+    </a> -->
+    <!-- <button class="{{'image-button image-hover center-center button' + (img ? ' no-color ' : '') + buttonClass}}" (click)="onClick()" [to]="to">            
+        <div class="image-button-text center-center" >{{name}}</div>
+    </button> -->
+    <!-- <div *ngIf="!to && !onClick" class="{{'image-button center-center' + (img ? ' no-color' : '')}}">
+        <div class="image-button-text center-center" >{{name}}</div>
+    </div> -->
+</div>
+<h3 class="image-title">{{name}}</h3>
+</a>
