@@ -9,6 +9,7 @@ import { EventsListComponent } from './events/events-list/events-list.component'
 import { ToDirective } from './shared/to.directive';
 import { NotFoundComponent } from './shared/not-found.component';
 import { ImageButtonComponent } from './shared/image-button/image-button.component';
+import { EventDetailComponent } from './events/event-detail/event-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ImageButtonComponent } from './shared/image-button/image-button.compone
     EventsListComponent,
     ToDirective,
     NotFoundComponent,
-    ImageButtonComponent
+    ImageButtonComponent,
+    EventDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { ImageButtonComponent } from './shared/image-button/image-button.compone
     RouterModule.forRoot([
         { path: '', component: HomeComponent },
         { path: 'events', component: EventsListComponent },
+        { path: 'events/:id', component: EventDetailComponent },
         { path: '**', component: NotFoundComponent }
     ])
   ],
