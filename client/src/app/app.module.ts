@@ -5,18 +5,25 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { EventsListComponent } from './events/events-list.component';
+import { ToDirective } from './shared/to.directive';
+import { NotFoundComponent } from './shared/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    EventsListComponent,
+    ToDirective,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
         { path: '', component: HomeComponent },
-        { path: '**', redirectTo: '', pathMatch: 'full' }
+        { path: 'events', component: EventsListComponent },
+        { path: '**', component: NotFoundComponent }
     ])
   ],
   providers: [],
