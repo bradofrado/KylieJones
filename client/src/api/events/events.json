@@ -1,13 +1,13 @@
 [
     {
-        "img": "assets/ChalkItUp.jpeg",
+        "images": ["assets/ChalkItUp.jpeg", "assets/ChalkItUp2.jpeg"],
         "name": "Chalk it Up",
         "description": "A fun time",
         "_id": "0"
     },
     {
-        "img": "assets/ChalkItUp2.jpeg",
-        "name": "Another Chalk",
+        "images": ["assets/ChalkItUp2.jpeg"],
+        "name": "Gala",
         "description": "More yes please!",
         "_id": "1"
     }

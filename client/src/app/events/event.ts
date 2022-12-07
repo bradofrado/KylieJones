@@ -1,5 +1,5 @@
 export interface IEvent {
-    img: string,
+    images: string[],
     _id: string,
     name: string,
     description: string
