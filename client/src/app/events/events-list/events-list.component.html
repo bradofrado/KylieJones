@@ -1,5 +1,4 @@
-<div class="portfolio-grid-basic container">
-    <image-button name="Hello world" to="/" img="assets/ChalkItUp.jpeg"></image-button>
-    <image-button name="Hello world" to="/art" img="assets/ChalkItUp2.jpeg"></image-button>
-    <image-button name="Hello world" img="assets/ChalkItUp.jpeg"></image-button>
+<div class="portfolio-grid-basic container py-5">
+    <image-button *ngFor="let event of events" 
+        [name]="event.name" [to]="'/events/' + event._id" [img]="event.img"></image-button>
 </div>
