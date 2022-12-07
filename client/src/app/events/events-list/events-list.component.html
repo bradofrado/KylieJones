@@ -1,4 +1,1 @@
-<div class="portfolio-grid-basic container py-5">
-    <image-button *ngFor="let event of events" 
-        [name]="event.name" [to]="'/events/' + event._id" [img]="event.images[0]"></image-button>
-</div>
+<portfolio-item-list [items]="events" baseUrl="/events"></portfolio-item-list>

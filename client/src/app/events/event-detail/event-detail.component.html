@@ -1,13 +1,1 @@
-<div class="container py-5">
-    <div *ngIf="event">
-        <h1>{{event.name}}</h1>
-        <p class="page-description">{{event.description}}</p>
-        <div class="portfolio-grid-basic py-5">
-            <div class="grid-item" *ngFor="let img of event.images">
-                <div>
-                    <img [src]="img"/>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<portfolio-item-detail [item]="event"></portfolio-item-detail>

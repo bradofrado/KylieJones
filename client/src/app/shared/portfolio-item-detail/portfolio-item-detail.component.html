@@ -1,0 +1,13 @@
+<div class="container py-5">
+    <div *ngIf="item">
+        <h1>{{item.name}}</h1>
+        <p class="page-description">{{item.description}}</p>
+        <div class="portfolio-grid-basic py-5">
+            <div class="grid-item" *ngFor="let img of item.images">
+                <div>
+                    <img [src]="img"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

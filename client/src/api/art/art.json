@@ -1,0 +1,14 @@
+[
+    {
+        "images": ["assets/ChalkItUp.jpeg", "assets/ChalkItUp2.jpeg"],
+        "name": "Bethleham",
+        "description": "Jesus!",
+        "_id": "0"
+    },
+    {
+        "images": ["assets/ChalkItUp2.jpeg"],
+        "name": "Gala",
+        "description": "More yes please!",
+        "_id": "1"
+    }
+]

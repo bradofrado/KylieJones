@@ -11,6 +11,10 @@ import { NotFoundComponent } from './shared/not-found.component';
 import { ImageButtonComponent } from './shared/image-button/image-button.component';
 import { EventDetailComponent } from './events/event-detail/event-detail.component';
 import { EventDetailGuard } from './events/event-detail/event-detail.guard';
+import { ArtListComponent } from './art/art-list/art-list.component';
+import { PortfolioItemListComponent } from './shared/portfolio-item-list/portfolio-item-list.component';
+import { PortfolioItemDetailComponent } from './shared/portfolio-item-detail/portfolio-item-detail.component';
+import { ArtDetailComponent } from './art/art-detail/art-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { EventDetailGuard } from './events/event-detail/event-detail.guard';
     ToDirective,
     NotFoundComponent,
     ImageButtonComponent,
-    EventDetailComponent
+    EventDetailComponent,
+    ArtListComponent,
+    PortfolioItemListComponent,
+    PortfolioItemDetailComponent,
+    ArtDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +37,8 @@ import { EventDetailGuard } from './events/event-detail/event-detail.guard';
         { path: '', component: HomeComponent },
         { path: 'events', component: EventsListComponent },
         { path: 'events/:id', canActivate: [EventDetailGuard], component: EventDetailComponent },
+        { path: 'art', component: ArtListComponent },
+        { path: 'art/:id', component: ArtDetailComponent },
         { path: '**', component: NotFoundComponent }
     ])
   ],
