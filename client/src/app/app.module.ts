@@ -15,6 +15,8 @@ import { ArtListComponent } from './art/art-list/art-list.component';
 import { PortfolioItemListComponent } from './shared/portfolio-item-list/portfolio-item-list.component';
 import { PortfolioItemDetailComponent } from './shared/portfolio-item-detail/portfolio-item-detail.component';
 import { ArtDetailComponent } from './art/art-detail/art-detail.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,17 +30,20 @@ import { ArtDetailComponent } from './art/art-detail/art-detail.component';
     ArtListComponent,
     PortfolioItemListComponent,
     PortfolioItemDetailComponent,
-    ArtDetailComponent
+    ArtDetailComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
         { path: '', component: HomeComponent },
         { path: 'events', component: EventsListComponent },
         { path: 'events/:id', canActivate: [EventDetailGuard], component: EventDetailComponent },
         { path: 'art', component: ArtListComponent },
         { path: 'art/:id', component: ArtDetailComponent },
+        { path: 'login', component: LoginComponent },
         { path: '**', component: NotFoundComponent }
     ])
   ],
