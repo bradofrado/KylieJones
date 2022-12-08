@@ -15,9 +15,11 @@ import { ArtListComponent } from './art/art-list/art-list.component';
 import { PortfolioItemListComponent } from './shared/portfolio-item-list/portfolio-item-list.component';
 import { PortfolioItemDetailComponent } from './shared/portfolio-item-detail/portfolio-item-detail.component';
 import { ArtDetailComponent } from './art/art-detail/art-detail.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { FormsModule } from '@angular/forms';
-import { SignupComponent } from './login/signup/signup.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { ProfileComponent } from './auth/profile/profile.component';
+import { AuthGuard } from './auth/auth.guard';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { SignupComponent } from './login/signup/signup.component';
     PortfolioItemDetailComponent,
     ArtDetailComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { SignupComponent } from './login/signup/signup.component';
         { path: 'art/:id', component: ArtDetailComponent },
         { path: 'login', component: LoginComponent },
         { path: 'signup', component: SignupComponent },
+        { path: 'profile', canActivate: [AuthGuard], component: ProfileComponent },
         { path: '**', component: NotFoundComponent }
     ])
   ],
