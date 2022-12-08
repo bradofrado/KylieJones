@@ -1,0 +1,16 @@
+<div class="container py-5">
+    <h1 class="mb-3">Join!</h1>
+    <form class="login-container" (submit)="onSignup($event)">
+        <div class="input-group">
+            <input type="text" class="form-control mb-3" placeholder="First name" name="First name" [(ngModel)]="firstname">
+            <input type="text" class="form-control mb-3" placeholder="Last name" name="Last name" [(ngModel)]="lastname">
+        </div>
+        <input type="text" class="form-control mb-3" placeholder="Email" name="Email" [(ngModel)]="email">
+        <input type="text" class="form-control mb-3" placeholder="Username" name="Username" [(ngModel)]="username">
+        <input type="password" class="form-control mb-3" placeholder="Password" name="Password" [(ngModel)]="password">
+        <input type="password" class="form-control mb-3" placeholder="Retype Password" name="Repassword" [(ngModel)]="repassword">
+        <p *ngIf="errorMessage" class="text-danger">{{errorMessage}}</p>
+        <button class="btn btn-primary mb-3" type="submit">Sign up</button>
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </form>
+</div>

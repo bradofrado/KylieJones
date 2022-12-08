@@ -5,7 +5,6 @@ import { IArtWork } from '../art';
 import { ArtService } from '../art.service';
 
 @Component({
-  selector: 'app-art-detail',
   templateUrl: './art-detail.component.html',
   styleUrls: ['./art-detail.component.css']
 })

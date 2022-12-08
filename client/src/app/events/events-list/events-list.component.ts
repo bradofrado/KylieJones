@@ -4,7 +4,6 @@ import { IEvent } from '../event';
 import { EventService } from '../event.service';
 
 @Component({
-  selector: 'app-events-list',
   templateUrl: './events-list.component.html',
   styleUrls: ['./events-list.component.css']
 })

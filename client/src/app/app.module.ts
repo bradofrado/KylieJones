@@ -17,6 +17,7 @@ import { PortfolioItemDetailComponent } from './shared/portfolio-item-detail/por
 import { ArtDetailComponent } from './art/art-detail/art-detail.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { SignupComponent } from './login/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FormsModule } from '@angular/forms';
     PortfolioItemListComponent,
     PortfolioItemDetailComponent,
     ArtDetailComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +46,7 @@ import { FormsModule } from '@angular/forms';
         { path: 'art', component: ArtListComponent },
         { path: 'art/:id', component: ArtDetailComponent },
         { path: 'login', component: LoginComponent },
+        { path: 'signup', component: SignupComponent },
         { path: '**', component: NotFoundComponent }
     ])
   ],

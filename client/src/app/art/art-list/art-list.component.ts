@@ -4,7 +4,6 @@ import { IArtWork } from '../art';
 import { ArtService } from '../art.service';
 
 @Component({
-  selector: 'app-art-list',
   templateUrl: './art-list.component.html',
   styleUrls: ['./art-list.component.css']
 })
@@ -14,7 +13,7 @@ export class ArtListComponent implements OnInit, OnDestroy {
     artItems: IArtWork[] = [];
     sub!: Subscription;
     errorMessage: string = '';
-    
+
     ngOnInit() {
         this.sub = this.artService.getArtItems().subscribe({
             next: artItems => this.artItems = artItems,

@@ -5,7 +5,6 @@ import { IEvent } from '../event';
 import { EventService } from '../event.service';
 
 @Component({
-  selector: 'app-event-detail',
   templateUrl: './event-detail.component.html',
   styleUrls: ['./event-detail.component.css']
 })
