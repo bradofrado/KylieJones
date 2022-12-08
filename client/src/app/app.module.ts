@@ -24,6 +24,10 @@ import { AdminProfileComponent } from './auth/admin-profile/admin-profile.compon
 import { ToggleButtonGroupComponent } from './shared/toggle-button-group/toggle-button-group.component';
 import { ToggleViewDirective } from './shared/toggle-view.directive';
 import { EditProfileComponent } from './auth/profile/edit-profile/edit-profile.component';
+import { EditPortfolioItemsComponent } from './auth/admin-profile/edit-portfolio-items/edit-portfolio-items.component';
+import { EditEventItemsComponent } from './auth/admin-profile/edit-portfolio-items/edit-event-items.component';
+import { EditArtItemsComponent } from './auth/admin-profile/edit-portfolio-items/edit-art-items.component';
+import { EditPortfolioItemComponent } from './auth/admin-profile/edit-portfolio-items/edit-portfolio-item.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,11 @@ import { EditProfileComponent } from './auth/profile/edit-profile/edit-profile.c
     AdminProfileComponent,
     ToggleButtonGroupComponent,
     ToggleViewDirective,
-    EditProfileComponent
+    EditProfileComponent,
+    EditPortfolioItemsComponent,
+    EditEventItemsComponent,
+    EditArtItemsComponent,
+    EditPortfolioItemComponent
   ],
   imports: [
     BrowserModule,

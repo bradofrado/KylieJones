@@ -4,13 +4,13 @@ import { Directive, Input, OnChanges, SimpleChanges, Type, ViewContainerRef } fr
   selector: '[toggle-view]'
 })
 export class ToggleViewDirective implements OnChanges {
-    constructor(private viewContainerRef: ViewContainerRef) { }
+    constructor(public viewContainerRef: ViewContainerRef) { }
 
     @Input() component: Type<any> | undefined;
 
     ngOnChanges(changes: SimpleChanges): void {
         const component = changes['component'].currentValue;
         this.viewContainerRef.clear();
-        this.viewContainerRef.createComponent<Type<any>>(component);
+        const s = this.viewContainerRef.createComponent<Type<any>>(component);
     }
 }

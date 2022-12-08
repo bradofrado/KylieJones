@@ -14,7 +14,6 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 })
 export class ProfileComponent implements OnInit {
     constructor(private authService: AuthService, private router: Router) {}
-    @ViewChild(ToggleViewDirective, {static: true}) toggleView!: ToggleViewDirective;
     
     user!: User; 
     settings: Settings[] = [
