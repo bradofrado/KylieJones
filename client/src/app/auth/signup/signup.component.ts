@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.css', '../login/login.component.css']
 })
 export class SignupComponent {
+    constructor(private authService: AuthService) {}
+
     errorMessage: string = '';
     private _firstname: string = '';
     private _lastname: string = '';
@@ -74,7 +77,9 @@ export class SignupComponent {
 
         let validate: string[] = [];
         if (this.validate(validate)) {
-            
+            this.authService.signup({
+                firstname: this.firstname, lastname: this.lastname, username: this.username, 
+                password: this.password, email: this.email});
         } else {
             this.errorMessage = validate[0];
         }

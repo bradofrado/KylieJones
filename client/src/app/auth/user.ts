@@ -3,8 +3,6 @@ export interface User {
     lastname: string,
     email: string,
     username: string
-}
-
-export interface SignupUser extends User {
-    password: string
+    password?: string,
+    roles?: string[]
 }

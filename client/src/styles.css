@@ -25,6 +25,10 @@ body {
     color: white;
 }
 
+.bg-gray {
+    background-color: #f7f8f8;
+}
+
 .btn-primary {
     --bs-btn-bg: var(--bs-primary);
     --bs-btn-border-color: var(--bs-btn-bg);
@@ -59,6 +63,63 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+[class*=side-panel-] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border-radius: 10px; */
+    padding: 10px;
+}
+
+.side-panel-sm {
+    max-width: 80px;
+}
+
+.side-panel-md {
+    width: 20%;
+}
+
+.edit-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    /* padding: 0 20px 20px 20px; */
+    border-radius: 10px;
+    /* background-color: #f7f8f8; */
+}
+
+.edit-view {
+    flex: 1;
+}
+
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    min-width: 40px;
+    padding: 5px;
+}
+
+.toggle-button.active {
+    background-color: #c8d7ec;
+}
+
+.toggle-button:hover {
+    background-color: #d6e6fe;
+}
+
+[class*=border-] {
+    border: 1px solid;
+}
+
+.border-gray {
+    border-color: #eceff2;
 }
 
 @media only screen and (min-width: 960px) {

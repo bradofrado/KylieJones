@@ -20,6 +20,10 @@ import { FormsModule } from '@angular/forms';
 import { SignupComponent } from './auth/signup/signup.component';
 import { ProfileComponent } from './auth/profile/profile.component';
 import { AuthGuard } from './auth/auth.guard';
+import { AdminProfileComponent } from './auth/admin-profile/admin-profile.component';
+import { ToggleButtonGroupComponent } from './shared/toggle-button-group/toggle-button-group.component';
+import { ToggleViewDirective } from './shared/toggle-view.directive';
+import { EditProfileComponent } from './auth/profile/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { AuthGuard } from './auth/auth.guard';
     ArtDetailComponent,
     LoginComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    AdminProfileComponent,
+    ToggleButtonGroupComponent,
+    ToggleViewDirective,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,

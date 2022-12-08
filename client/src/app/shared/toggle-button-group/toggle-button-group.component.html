@@ -1,0 +1,1 @@
+<button *ngFor="let state of states" [class]="'toggle-button mb-3' + (state.state ? ' active' : '')" (click)="onToggleClick(state)">{{state.name}}</button>

@@ -1,10 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
+    constructor(private authService: AuthService, private router: Router) {}
+
     private _username: string = '';
     private _password: string = '';
 
@@ -40,8 +44,15 @@ export class LoginComponent {
         }
     }
 
-    private login(username: string, password: string): void {
+    ngOnInit(): void {
+        if (this.authService.getAuth()) {
+            this.router.navigate(['/profile']);
+        }
+    }
 
+    private login(username: string, password: string): void {
+        this.authService.login(username, password);
+        this.router.navigate(['/profile']);
     }
 
     private validate(validate: string[]): boolean {
