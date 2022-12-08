@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { ToggleButtonState } from 'src/app/shared/toggle-button-group/toggle-button-state';
+import { Component, Type } from '@angular/core';
+import { ImageButtonComponent } from 'src/app/shared/image-button/image-button.component';
+import { EditProfileComponent } from '../profile/edit-profile/edit-profile.component';
 
 @Component({
   selector: 'admin-profile',
@@ -7,14 +8,27 @@ import { ToggleButtonState } from 'src/app/shared/toggle-button-group/toggle-but
   styleUrls: ['./admin-profile.component.css']
 })
 export class AdminProfileComponent {
-    portfolioItems: ToggleButtonState[] = [
+    portfolioItems: Settings[] = [
         {
             name: 'Events',
-            state: true
+            state: true,
+            component: EditProfileComponent
         },
         {
             name: 'Art',
-            state: false
+            state: false,
+            component: ImageButtonComponent
         }
-    ]
+    ];
+
+    get component(): Type<any> | undefined {
+        const setting = this.portfolioItems.find(x => x.state);
+        return setting ? setting.component : undefined;
+    }
+}
+
+interface Settings {
+    name: string,
+    state: boolean,
+    component: Type<any>
 }

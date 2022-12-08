@@ -1,7 +1,7 @@
 <div class="edit-container">
-    <div class="side-panel-sm" toggle-button-group [states]="settings" (change)="onToggleChange($event)">
+    <div class="side-panel-sm" toggle-button-group [states]="settings">
     </div>
     <div class="edit-view border-gray">
-        <ng-template toggle-view></ng-template>
+        <ng-template toggle-view [component]="component"></ng-template>
     </div>
 </div>

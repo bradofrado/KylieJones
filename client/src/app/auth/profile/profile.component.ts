@@ -29,11 +29,10 @@ export class ProfileComponent implements OnInit {
         return this.user.roles ? this.user.roles.includes('admin') : false;
     }
 
-    // get currSetting(): Settings | undefined {
-    //     const setting = this.settings.find(x => x.state);
-        
-    //     return setting;
-    // }
+    get component(): Type<any> | undefined{
+        const setting = this.settings.find(x => x.state);
+        return setting ? setting.component : undefined;
+    }
 
     ngOnInit() {
         let user = this.authService.getAuth();
@@ -43,16 +42,6 @@ export class ProfileComponent implements OnInit {
                 this.settings.push({name: 'Edit', state: false, component: AdminProfileComponent});
             }
         }
-
-        const viewContainerRef = this.toggleView.viewContainerRef.createComponent<Type<any>>(this.settings[0].component);
-    }
-
-    onToggleChange(state: ToggleButtonState) {
-        const setting = state as Settings;
-        const viewContainerRef = this.toggleView.viewContainerRef;
-        viewContainerRef.clear();
-
-        viewContainerRef.createComponent<Type<any>>(setting.component);
     }
 
     onLogout(e: Event) {
