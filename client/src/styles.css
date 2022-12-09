@@ -40,6 +40,15 @@ body {
     --bs-btn-disabled-border-color: var(--bs-btn-disabled-bg);
 }
 
+.flex-split {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-split img {
+    width: 100%;
+}
+
 .portfolio-grid-basic {
     display: grid;
     grid-template-columns: repeat(1,minmax(0,1fr));

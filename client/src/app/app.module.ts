@@ -30,6 +30,7 @@ import { EditEventItemsComponent } from './auth/admin-profile/edit-portfolio-ite
 import { EditArtItemsComponent } from './auth/admin-profile/edit-portfolio-items/edit-art-items.component';
 import { EditPortfolioItemComponent } from './auth/admin-profile/edit-portfolio-items/edit-portfolio-item.component';
 import { HeaderComponent } from './header.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { HeaderComponent } from './header.component';
     EditArtItemsComponent,
     EditPortfolioItemComponent,
     HeaderComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,6 +73,7 @@ import { HeaderComponent } from './header.component';
         { path: 'login', component: LoginComponent },
         { path: 'signup', component: SignupComponent },
         { path: 'profile', canActivate: [AuthGuard], component: ProfileComponent },
+        { path: 'about', component: AboutComponent },
         { path: '**', component: NotFoundComponent }
     ])
   ],
