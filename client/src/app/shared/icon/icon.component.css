@@ -1,0 +1,15 @@
+/* Icons */
+svg {
+    fill: #fff;
+}
+
+.icon {
+    /* margin-right: 1rem; */
+    width: 32px;
+    color: #000;
+    font-size: 18px;
+}
+
+.circle-hover svg:hover {
+    fill: #0d6efd;
+}

@@ -42,11 +42,17 @@ body {
 
 .flex-split {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .flex-split img {
     width: 100%;
+}
+
+@media only screen and (min-width: 960px) {
+    .flex-split {
+        flex-direction: row;
+    }
 }
 
 .portfolio-grid-basic {

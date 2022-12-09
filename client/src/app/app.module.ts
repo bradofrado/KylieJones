@@ -31,6 +31,9 @@ import { EditArtItemsComponent } from './auth/admin-profile/edit-portfolio-items
 import { EditPortfolioItemComponent } from './auth/admin-profile/edit-portfolio-items/edit-portfolio-item.component';
 import { HeaderComponent } from './header.component';
 import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './footer.component';
+import { LinkIconComponent } from './shared/icon/link-icon.component';
+import { IconComponent } from './shared/icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +61,9 @@ import { AboutComponent } from './about/about.component';
     EditPortfolioItemComponent,
     HeaderComponent,
     AboutComponent,
+    FooterComponent,
+    LinkIconComponent,
+    IconComponent,
   ],
   imports: [
     BrowserModule,
