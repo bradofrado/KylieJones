@@ -16,4 +16,8 @@ export class ArtService extends BaseService {
     getArtItem(id: string) {
         return this.getPortfolioItem<IArtWork>(this.url, id);
     }
+
+    editArtItem(item: IArtWork) {
+        alert(`editting ${item.name}`);
+    }
 }

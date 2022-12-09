@@ -2,6 +2,7 @@ import { Component, Input, OnInit, Type, ViewChild } from '@angular/core';
 import { IEvent } from 'src/app/events/event';
 import { EventService } from 'src/app/events/event.service';
 import { ImageButtonComponent } from 'src/app/shared/image-button/image-button.component';
+import { IPortfolioItem } from 'src/app/shared/portfolio-item';
 import { ToggleButtonState } from 'src/app/shared/toggle-button-group/toggle-button-state';
 import { ToggleViewDirective } from 'src/app/shared/toggle-view.directive';
 import { EditPortfolioItemComponent } from './edit-portfolio-item.component';
@@ -17,7 +18,10 @@ export class EditPortfolioItemsComponent implements OnInit {
     _items: Settings[] = [];
     @Input() set items(value: Settings[]) {
         this._items = value;
-        this.createComponent(value[0]);
+
+        if (value && value.length > 0) {
+            this.createComponent(value[0]);
+        }
     }
     get items(): Settings[] {
         return this._items;
@@ -40,6 +44,7 @@ export class EditPortfolioItemsComponent implements OnInit {
         container.clear();
         const comp = container.createComponent<EditPortfolioItemComponent>(setting.component);
         comp.instance.item = setting.data;
+        comp.instance.submit.subscribe(item => setting.submit(item));
     }
 }
 
@@ -47,5 +52,6 @@ export interface Settings {
     name: string,
     state: boolean,
     component: Type<any>,
-    data: IEvent
+    data: IPortfolioItem,
+    submit(item: IPortfolioItem): void;
 }

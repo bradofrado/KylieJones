@@ -23,4 +23,8 @@ export class EventService extends BaseService {
         // );
         return this.getPortfolioItem<IEvent>(this.url, id);
     }
+
+    editEvent(item: IEvent) {
+        alert(`editting ${item.name}`);
+    }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ArtService } from "src/app/art/art.service";
 import { ImageButtonComponent } from "src/app/shared/image-button/image-button.component";
+import { IPortfolioItem } from "src/app/shared/portfolio-item";
 import { EditPortfolioItemComponent } from "./edit-portfolio-item.component";
 import { Settings } from "./edit-portfolio-items.component";
 
@@ -18,8 +19,13 @@ export class EditArtItemsComponent implements OnInit {
                     name: x.name, 
                     state: i == 0, 
                     component: EditPortfolioItemComponent,
-                    data: x 
+                    data: x,
+                    submit: this.onSubmit.bind(this)
                 }))
             })
+    }
+
+    onSubmit(item: IPortfolioItem) {
+        this.service.editArtItem(item);
     }
 }
