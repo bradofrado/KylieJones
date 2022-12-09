@@ -29,6 +29,28 @@ export class EditPortfolioItemComponent {
         }
     }
 
+    onDelete(img: string) {
+        const index = this.item.images.indexOf(img);
+
+        if (index > -1) {
+            this.item.images.splice(index, 1);
+        }
+    }
+
+    onFile(e: any) {
+        const files: File[] = e.target.files;
+        const item = this.item;
+
+        for (let file of files) {
+            var reader = new FileReader();
+            reader.onload = function(){
+                if (typeof(reader.result) == 'string')
+                    item.images.push(reader.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
     validate(item: IPortfolioItem) {
         if (!item.name || !item.description || !item.images || item.images.length == 0) {
             this.errorMessage = "Must enter all fields";
