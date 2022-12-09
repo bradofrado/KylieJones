@@ -29,6 +29,7 @@ import { EditPortfolioItemsComponent } from './auth/admin-profile/edit-portfolio
 import { EditEventItemsComponent } from './auth/admin-profile/edit-portfolio-items/edit-event-items.component';
 import { EditArtItemsComponent } from './auth/admin-profile/edit-portfolio-items/edit-art-items.component';
 import { EditPortfolioItemComponent } from './auth/admin-profile/edit-portfolio-items/edit-portfolio-item.component';
+import { HeaderComponent } from './header.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { EditPortfolioItemComponent } from './auth/admin-profile/edit-portfolio-
     EditEventItemsComponent,
     EditArtItemsComponent,
     EditPortfolioItemComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
