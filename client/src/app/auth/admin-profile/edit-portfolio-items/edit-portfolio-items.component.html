@@ -2,7 +2,7 @@
     <div class="side-panel-lg border-gray b-w">
         <div class="panel-header">
             <span>{{title}}</span>
-            <span class="small-blue" role="button"><i class="fa fa-plus"></i> Add</span>
+            <span class="small-blue" role="button" (click)="onAdd()"><i class="fa fa-plus"></i> Add</span>
         </div>
         <div class="flex-column w-1" toggle-button-group [states]="items" (change)="onToggleClick($event)" btnClass="btn-tag w-1"></div>
     </div>

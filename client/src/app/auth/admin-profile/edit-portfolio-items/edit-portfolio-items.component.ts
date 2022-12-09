@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Type, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, Type, ViewChild } from '@angular/core';
 import { IEvent } from 'src/app/events/event';
 import { EventService } from 'src/app/events/event.service';
 import { ImageButtonComponent } from 'src/app/shared/image-button/image-button.component';
@@ -26,8 +26,13 @@ export class EditPortfolioItemsComponent implements OnInit {
     get items(): Settings[] {
         return this._items;
     }
+
+    get setting(): Settings | undefined {
+        return this.items && this.items.find(x => x.state);
+    }
     
     @Input() title: string = 'Portfolio Items';
+    @Output() add: EventEmitter<any> = new EventEmitter<any>();
 
     ngOnInit(): void {
         //this.createComponent(this.items[0]);
@@ -39,7 +44,14 @@ export class EditPortfolioItemsComponent implements OnInit {
         this.createComponent(setting);
     }
 
-    createComponent(setting: Settings) {
+    onAdd() {
+        this.add.emit();
+        this.createComponent(this.setting);
+    }
+
+    createComponent(setting: Settings | undefined) {
+        if (!setting) return;
+        
         const container = this.viewChild.viewContainerRef;
         container.clear();
         const comp = container.createComponent<EditPortfolioItemComponent>(setting.component);
