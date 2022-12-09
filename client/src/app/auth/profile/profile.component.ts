@@ -18,7 +18,7 @@ export class ProfileComponent implements OnInit {
     user!: User; 
     settings: Settings[] = [
         {
-            name: 'Profile',
+            name: '<i class="fa fa-user"></i>',
             state: true,
             component: EditProfileComponent
         }
@@ -38,7 +38,7 @@ export class ProfileComponent implements OnInit {
         if (user) {
             this.user = user;
             if (this.isAdmin) {
-                this.settings.push({name: 'Edit', state: false, component: AdminProfileComponent});
+                this.settings.push({name: '<i class="fa fa-file-o"></i>', state: false, component: AdminProfileComponent});
             }
         }
     }

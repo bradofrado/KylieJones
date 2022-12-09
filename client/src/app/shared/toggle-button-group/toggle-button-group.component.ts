@@ -8,8 +8,9 @@ import { ToggleButtonState } from './toggle-button-state';
 })
 export class ToggleButtonGroupComponent {
     @Input() states: ToggleButtonState[] = [];
-    @Output() change: EventEmitter<ToggleButtonState> = new EventEmitter<ToggleButtonState>();
-    
+    @Input() btnClass: string = 'toggle-button';
+    @Output() change: EventEmitter<ToggleButtonState> = new EventEmitter<ToggleButtonState>(); 
+
     onToggleClick(state: ToggleButtonState) {
         this.states.forEach(_state => {
             if (_state == state) {

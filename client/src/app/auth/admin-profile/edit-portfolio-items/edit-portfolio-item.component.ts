@@ -7,5 +7,14 @@ import { IPortfolioItem } from 'src/app/shared/portfolio-item';
   styleUrls: ['./edit-portfolio-item.component.css']
 })
 export class EditPortfolioItemComponent {
-    @Input() item!: IPortfolioItem;
+    _item!: IPortfolioItem;
+    @Input() get item(): IPortfolioItem {
+        return this._item;
+    }
+    set item(value: IPortfolioItem) {
+        this._item = value;
+        this.title = value.name;
+    }
+
+    title!: string;
 }

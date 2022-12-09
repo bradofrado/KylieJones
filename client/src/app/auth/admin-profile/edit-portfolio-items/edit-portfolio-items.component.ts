@@ -22,6 +22,8 @@ export class EditPortfolioItemsComponent implements OnInit {
     get items(): Settings[] {
         return this._items;
     }
+    
+    @Input() title: string = 'Portfolio Items';
 
     ngOnInit(): void {
         //this.createComponent(this.items[0]);

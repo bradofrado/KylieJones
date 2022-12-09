@@ -1,5 +1,10 @@
 <div class="edit-container">
-    <div class="side-panel-lg" toggle-button-group [states]="items" (change)="onToggleClick($event)">
+    <div class="side-panel-lg border-gray b-w">
+        <div class="panel-header">
+            <span>{{title}}</span>
+            <span class="small-blue" role="button"><i class="fa fa-plus"></i> Add</span>
+        </div>
+        <div class="flex-column w-1" toggle-button-group [states]="items" (change)="onToggleClick($event)" btnClass="btn-tag w-1"></div>
     </div>
     <div class="edit-view">
         <ng-template toggle-view></ng-template>

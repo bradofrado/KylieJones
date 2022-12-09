@@ -5,7 +5,7 @@ import { EditPortfolioItemComponent } from "./edit-portfolio-item.component";
 import { Settings } from "./edit-portfolio-items.component";
 
 @Component({
-    template: '<edit-portfolio-items [items]="items"></edit-portfolio-items>'
+    template: '<edit-portfolio-items [items]="items" title="Art Items"></edit-portfolio-items>'
 })
 export class EditArtItemsComponent implements OnInit {
     constructor(private service: ArtService) {}
