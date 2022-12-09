@@ -4,8 +4,8 @@
         <input type="text" class="form-control mb-3" placeholder="Name" name="Name" [(ngModel)]="item.name">
         <input type="text" class="form-control mb-3" placeholder="Description" name="Description" [(ngModel)]="item.description">
         <input type="file" class="form-control mb-3" (change)="onFile($event)">
-        <div class="image-container">
-            <div *ngFor="let img of item.images" class="image-item tile">
+        <div class="image-container" cdkDropList (cdkDropListDropped)="drop($event)">
+            <div *ngFor="let img of item.images" class="image-item tile" cdkDrag>
                 <div class="tile-image">
                     <img [src]="img" />
                 </div>

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IPortfolioItem } from 'src/app/shared/portfolio-item';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-edit-portfolio-item',
@@ -49,6 +50,10 @@ export class EditPortfolioItemComponent {
             };
             reader.readAsDataURL(file);
         }
+    }
+
+    drop(event: CdkDragDrop<string[]>) {
+        moveItemInArray(this.item.images, event.previousIndex, event.currentIndex);
     }
 
     validate(item: IPortfolioItem) {

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { DragDropModule } from '@angular/cdk/drag-drop'
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
@@ -52,12 +53,13 @@ import { EditPortfolioItemComponent } from './auth/admin-profile/edit-portfolio-
     EditPortfolioItemsComponent,
     EditEventItemsComponent,
     EditArtItemsComponent,
-    EditPortfolioItemComponent
+    EditPortfolioItemComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    DragDropModule,
     RouterModule.forRoot([
         { path: '', component: HomeComponent },
         { path: 'events', component: EventsListComponent },

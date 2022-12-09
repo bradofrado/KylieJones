@@ -169,6 +169,10 @@ h1 {
     width: 100%;
 }
 
+.fa.fa-grip:before {
+    content: "\f142 \202F \f142 \202F \f142";
+}
+
 @media only screen and (min-width: 960px) {
     .portfolio-grid-basic {
         grid-template-columns: repeat(2,minmax(0,1fr));
