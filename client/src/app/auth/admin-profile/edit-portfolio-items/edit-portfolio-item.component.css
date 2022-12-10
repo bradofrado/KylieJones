@@ -42,6 +42,10 @@
     opacity: 1;
 }
 
+.x i:hover {
+    cursor: pointer;
+}
+
 .image-item > div {
     height: 100%;
 }
