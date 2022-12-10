@@ -1,0 +1,13 @@
+.info-container {
+    padding: 40px 0;
+}
+
+p {
+    margin: 20px 0;
+}
+
+hr {
+    opacity: 1;
+    width: 40px;
+    margin: 40px 0;
+}

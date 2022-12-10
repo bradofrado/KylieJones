@@ -1,9 +1,10 @@
 <div class="flex-split container py-5">
-    <div>
-        <h1>Kylie Jones is a great asset</h1>
-        <p>She loves people and plants and birbs</p>
+    <div class="info-container">
+        <h1>{{about.title}}</h1>
+        <hr>
+        <p *ngFor="let description of about.descriptions">{{description}}</p>
     </div>
     <div>
-        <img src="assets/ChalkItUp.jpeg"/>
+        <img [src]="about.images[0]"/>
     </div>
 </div>
